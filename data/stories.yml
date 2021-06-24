@@ -1,0 +1,102 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: demo
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: name_is
+  - action: utter_name_is
+  - intent: course
+  - action: action_courses
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: restaurants story vsp
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: search_restaurants
+  - action: utter_ask_location
+  - intent: available_vsp
+  - action: utter_restaurants_details_vsp
+  - action: utter_needfull
+  - intent: deny 
+  - action: utter_goodbye
+- story: restaurants story hyd
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: search_restaurants
+  - action: utter_ask_location
+  - intent: available_hyd
+  - action: utter_restaurants_details_hyd
+  - action: utter_needfull
+  - intent: affirm
+  - action: utter_tell_me_more
+  - intent: search_restaurants
+  - action: utter_ask_location
+  - intent: available_vsp
+  - action: utter_restaurants_details_vsp
+  - action: utter_needfull
+  - intent: deny 
+  - action: utter_goodbye
+- story: story for hotels
+  steps:
+  - intent: greet
+  - action: utter_hi
+  - intent: to_know
+  - action: utter_thankfull
+  - action: utter_to_know
+  - intent: to_ack
+  - action: utter_to_ask_help
+  - intent: search_hotels
+  - action: utter_ask_location
+  - intent: available_vsp
+  - action: utter_search_hotels_in_vsp
+  - action: utter_needfull
+  - intent: affirm
+  - action: utter_tell_me_more
+  - intent: search_hotels
+  - action: utter_ask_location
+  - intent: available_vsp
+  - action: utter_restaurants_details_vsp
+  - action: utter_needfull
+  - intent: deny
+  - action: utter_goodbye
+
+
+
+
+
+
+
+

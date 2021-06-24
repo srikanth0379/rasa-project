@@ -1,0 +1,98 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - ask_location
+  - search_restaurants
+  - available_vsp
+  - available_hyd
+  - to_ack
+  - search_hotels
+  - to_know
+
+actions:
+  - utter_greet
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_happy
+  - utter_goodbye
+  - utter_iamabot
+  - utter_ask
+  - utter_location_resp
+  - utter_ask_location
+  - utter_restaurants_details_vsp
+  - utter_needfull
+  - utter_hi
+  - utter_restaurants_details_hyd
+  - utter_tell_me_more
+  - utter_thankfull
+  - utter_to_know
+  - utter_to_ask_help
+  - utter_search_hotels_in_vsp
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_ask:
+  - text: "Sorry to here that!"
+
+  utter_location_resp:
+  - text: "Iam from visakhapatnam"
+
+  utter_ask_location:
+  - text: "May i know in which location you are looking for?"
+
+  utter_restaurants_details_vsp:
+  - text: "Here are the available restaurants in visakhapatnam. \"Alpha\" \"Kamat\" etc.."
+
+  utter_needfull:
+  - text: "Any other information needed"
+
+  utter_hi:
+  - text: "Hi!!!!!"
+
+  utter_restaurants_details_hyd:
+  - text: "Here are the available restaurants in Hyderabad. \"Bonsai\" \"Paradise\" \"Mandil\" etc.."
+
+  utter_tell_me_more:
+  - text: "Tell me how can I help you?"
+
+  utter_thankfull:
+  - text: "Iam good. Thankyou"
+
+  utter_to_know:
+  - text: "How are you?"
+
+  utter_to_ask_help:
+  - text: "Tell me how can i help you?"
+
+  utter_search_hotels_in_vsp:
+  - text: "Here are the hotels available in visakhapatnam. \"The park\" \"Novotel\""
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
